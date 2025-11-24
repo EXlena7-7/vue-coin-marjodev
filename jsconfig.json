@@ -15,5 +15,8 @@
       "dom.iterable",
       "scripthost"
     ]
-  }
+  },
+  "rules": {
+  "vue/no-multiple-template-root": "off"
+}
 }
