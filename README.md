@@ -1,4 +1,4 @@
-# vue-coingecko-api
+# Proyeto desarrollado en vue con la api de coingecko
 
 ## Project setup
 ```
