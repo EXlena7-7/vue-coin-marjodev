@@ -1,18 +1,18 @@
 <template>
   <div class="container">
     <div class="row">
-      <h1>CoinMarjoDev</h1>
+      <h1 class="text-warning">Coin Today</h1>
 
       <input
         type="text"
-        class="form-control text-light bg-dark rounded-0 border-0 my-4"
+        class="form-control text-light bg-secondary rounded-0 border-0 my-4"
         placeholder="Search"
         v-model="textSearch"
         @keyup="searchCoin()"
         autofocus
       />
 
-      <table class="table table-hover table-dark text-light">
+      <table class="table table-hover table-secondary text-light ">
         <thead>
           <tr>
             <th v-for="(title, index) in titles" :key="index">
@@ -44,6 +44,13 @@
             </td>
             <td>{{ coin.total_volume.toLocaleString() }}</td>
           </tr>
+        </tbody>
+        <tbody v-if="filteredCoins.length === 0">
+          
+            <td :colspan="titles.length" class="text-center text-success text-muted py-4">
+              <p>Cripto not found!!</p>
+            </td>
+        
         </tbody>
       </table>
     </div>
